@@ -2,26 +2,26 @@ module.exports = function(grunt) {
   grunt.initConfig({
     jshint: {
       lib: {
-        src: ['lib/**/*.js'],
+        src: ['lib/**/*.js']
       },
       tests: {
-        src: ['tests/**/*.js'],
-      },
+        src: ['tests/**/*.js']
+      }
     },
     mochaTest: {
       tests: {
         options: {
-          reporter: 'spec',
+          reporter: 'spec'
         },
-        src: ['tests/**/*.js'],
-      },
+        src: ['tests/**/*.js']
+      }
     },
     exec: {
       jsfmtLib: './bin/jsfmt -w ./lib/**/*.js',
       jsfmtTests: './bin/jsfmt -w ./tests/**/*.js',
       jsfmtGrunt: './bin/jsfmt -w ./Gruntfile.js',
-      jsfmtStyleGuide: './bin/jsfmt -w ./examples/styleGuide.js',
-    },
+      jsfmtStyleGuide: './bin/jsfmt -w ./examples/styleGuide.js'
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
